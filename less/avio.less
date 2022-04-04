@@ -1,0 +1,55 @@
+.avio {
+	align-items: center;
+	display: flex;
+	/*flex-wrap: wrap;*/
+	flex: 1 1 42rem;
+	gap:2rem;
+	margin-top: 50px;
+
+	.video-container {
+		flex: 1 1 42rem;
+		flex: 1 1 62rem;
+		padding: 1%;
+		width: @w100;
+		.video {
+			border-radius: 1rem;
+			width: @w100;
+		}
+		.controls {
+			padding: 2rem;
+			text-align: center;
+			span {
+				background-color: @first-color;
+				border-radius: 50%;
+				cursor: pointer;
+				display: inline-block;
+				.size(1rem,1rem);
+				&:hover {
+					.scale-transform(1.3);
+				}
+			}
+		}
+	}
+	.video-content {
+		color: @first-color;
+		flex: 1 1 42rem;
+		margin-bottom: 5rem;
+		text-align: justify;
+		padding: 2%;
+		span {
+			color: @secound-color;
+			.text-decoration(2rem,600);
+			padding: 1%;
+		}
+		h3 {
+			color: @first-color;
+			font-size: 18px;
+			padding: 1%;
+		}
+		p {
+			font-size: 15px;
+			padding: 1%;
+			
+		}
+	}
+}

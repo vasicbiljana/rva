@@ -1,0 +1,52 @@
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: @w100;
+
+	.gallery-content {
+		position: relative;
+		.img-gallery {
+			width: 25rem;
+			height: 25rem;
+			object-fit: cover;
+			overflow: hidden;
+			padding: 5px;
+			position: relative;
+			
+		}
+		&:hover {
+			.overlay {
+				opacity: .9;
+			}
+		}
+		.overlay {
+			.text {
+				.translate(-50%, -50%);
+				color: @white-color;
+				.text-decoration(25px,700);
+				left: 50%;
+				position: absolute;
+				text-align: center;
+				top: 50%;
+			}
+		}
+	}
+}
+.overlay {
+	background-color: @first-color;
+	bottom: 0;
+	height: @h100;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	.transition(0.5s ease);
+	width: @w100;
+}
+.gallery-content.img-gallery {
+	img {
+		.size(100%,100%);
+	}
+}
